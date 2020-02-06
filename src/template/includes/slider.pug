@@ -1,0 +1,87 @@
+section.carousel-container.disable
+	a(href="#").btn-more.btn.btn-primary.d-inline-flex.align-items-center.justify-content-center(role="button") Начать демонстрацию
+	.preloader.spinner-border.text-warning(role='status')
+		span.sr-only Loading...
+
+	.container-fluid
+		.row
+			#carouselId.carouselId.carousel.slide.w-100(data-ride='carousel')
+				ol.container.carousel-indicators.mx-auto.mb-4
+					li.d-flex.w-25.align-items-center.active(data-target='#carouselId', data-slide-to='0', style="text-indent: 0")
+						img(src="./img/previews/slider_1pre.jpg" alt="First preview").d-none.d-md-block
+						span.carousel-indicators__content.d-none.d-md-block
+							span.carousel-indicators__title.d-block Акция действует с 01.07.18
+							span.carousel-indicators__description.d-block Этот текст добавлен для демонстрации на странице
+
+					li.d-flex.w-25.align-items-center(data-target='#carouselId', data-slide-to='1', style="text-indent: 0")
+						img(src="./img/previews/slider_2pre.jpg" alt="First preview").d-none.d-md-block
+						span.carousel-indicators__content.d-none.d-md-block
+							span.carousel-indicators__title.d-block Акция действует с 01.07.18
+							span.carousel-indicators__description.d-block Этот текст добавлен для демонстрации на странице
+
+					li.d-flex.w-25.align-items-center(data-target='#carouselId', data-slide-to='2', style="text-indent: 0")
+						img(src="./img/previews/slider_3pre.jpg" alt="First preview").d-none.d-md-block
+						span.carousel-indicators__content.d-none.d-md-block
+							span.carousel-indicators__title.d-block Акция действует с 01.07.18
+							span.carousel-indicators__description.d-block Этот текст добавлен для демонстрации на странице
+
+					li.d-flex.w-25.align-items-center(data-target='#carouselId', data-slide-to='3', style="text-indent: 0")
+						img(src="./img/previews/slider_4pre.jpg" alt="First preview").d-none.d-md-block
+						span.carousel-indicators__content.d-none.d-md-block
+							span.carousel-indicators__title.d-block Акция действует с 01.07.18
+							span.carousel-indicators__description.d-block Этот текст добавлен для демонстрации на странице
+
+
+				.carousel-inner(style="height: 675px")
+					.carousel-item.active.h-100(style="background-image: url('./img/slides/slider_1.jpg')")
+							.container.h-100
+								.row.align-items-center.h-100
+									.carousel-item__content.col.col-md-7.offset-md-5.text-center.text-md-left
+										h3.mb-md-3  Этот текст добавлен для демонстрации на странице
+										p.d-none.d-md-block Акция действует с 01.07.18 по 31.07.18
+										p.d-block.d-md-none Тест на внимательность
+										.carousel-item__buttons
+											a(href="#").btn.btn-primary.d-inline-flex.align-items-center.justify-content-center.mr-0.mr-md-4(role="button") Подробнее
+											a(href="#").btn.btn-outline-primary.d-none.d-md-inline-flex.align-items-center.justify-content-center(role="button") Все акции
+
+					.carousel-item.h-100(style="background-image: url('./img/slides/slider_2.jpg')")
+							.container.h-100
+								.row.align-items-center.h-100
+									.carousel-item__content.col.col-md-7.offset-md-5.text-center.text-md-left
+										h3.mb-md-3  Этот текст добавлен для демонстрации на странице
+										p.d-none.d-md-block Акция действует с 01.07.18 по 31.07.18
+										p.d-block.d-md-none Тест на внимательность
+										.carousel-item__buttons
+											a(href="#").btn.btn-primary.d-inline-flex.align-items-center.justify-content-center.mr-0.mr-md-4(role="button") Подробнее
+											a(href="#").btn.btn-outline-primary.d-none.d-md-inline-flex.align-items-center.justify-content-center(role="button") Все акции
+
+					.carousel-item.h-100(style="background-image: url('./img/slides/slider_3.jpg')")
+							.container.h-100
+								.row.align-items-center.h-100
+									.carousel-item__content.col.col-md-7.offset-md-5.text-center.text-md-left
+										h3.mb-md-3  Этот текст добавлен для демонстрации на странице
+										p.d-none.d-md-block Акция действует с 01.07.18 по 31.07.18
+										p.d-block.d-md-none Тест на внимательность
+										.carousel-item__buttons
+											a(href="#").btn.btn-primary.d-inline-flex.align-items-center.justify-content-center.mr-0.mr-md-4(role="button") Подробнее
+											a(href="#").btn.btn-outline-primary.d-none.d-md-inline-flex.align-items-center.justify-content-center(role="button") Все акции
+
+					.carousel-item.h-100(style="background-image: url('./img/slides/slider_4.jpg')")
+							.container.h-100
+								.row.align-items-center.h-100
+									.carousel-item__content.col.col-md-7.offset-md-5.text-center.text-md-left
+										h3.mb-md-3  Этот текст добавлен для демонстрации на странице
+										p.d-none.d-md-block Акция действует с 01.07.18 по 31.07.18
+										p.d-block.d-md-none Тест на внимательность
+										.carousel-item__buttons
+											a(href="#").btn.btn-primary.d-inline-flex.align-items-center.justify-content-center.mr-0.mr-md-4(role="button") Подробнее
+											a(href="#").btn.btn-outline-primary.d-none.d-md-inline-flex.align-items-center.justify-content-center(role="button") Все акции
+
+				a.carousel-control-prev.d-none.d-md-flex(href='#carouselId', role='button', data-slide='prev')
+					svg.bi.bi-chevron-left(width='1em', height='1em', viewBox='0 0 20 20', fill='currentColor', xmlns='http://www.w3.org/2000/svg')
+						path(fill-rule='evenodd', d='M13.354 3.646a.5.5 0 010 .708L7.707 10l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z', clip-rule='evenodd')
+					span.sr-only Previous
+				a.carousel-control-next.d-none.d-md-flex(href='#carouselId', role='button', data-slide='next')
+					svg.bi.bi-chevron-right(width='1em', height='1em', viewBox='0 0 20 20', fill='currentColor', xmlns='http://www.w3.org/2000/svg')
+						path(fill-rule='evenodd', d='M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z', clip-rule='evenodd')
+					span.sr-only Next

@@ -1,0 +1,317 @@
+//body styles
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+//carousel-container styles
+.carousel-container {
+  position: relative;
+
+  //styles for first layout
+  .preloader {
+    position: absolute;
+    z-index: 1001;
+    display: none;
+    left: calc(50% - 2rem);
+    top: calc(50% - 2rem);
+  }
+
+  &:after {
+    transition: top 0.5s linear, opacity 0.5s linear;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -100%;
+    background-color: #c4cdd6;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 0;
+  }
+
+  &.disable {
+    &:after {
+      transition: top 0.5s linear, opacity 0.5s linear;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0%;
+      opacity: 1;
+      background-color: #c4cdd6;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+    }
+  }
+  .carousel-inner {
+    @include media-breakpoint-down(sm) {
+      height: 400px !important;
+    }
+  }
+
+  //carousel-items styles
+  .carousel-item {
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+
+    @include media-breakpoint-down(sm) {
+      background-size: auto 115%;
+    }
+
+    @include media-breakpoint-up(sm) {
+      background-position: bottom 24% left 9%;
+    }
+
+    @include media-breakpoint-up(md) {
+      background-position: left 36% center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-position: center center;
+    }
+
+    &__content {
+      z-index: 1;
+
+      @include media-breakpoint-up(sm) {
+        padding-bottom: 10px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 43px;
+        padding-left: 62px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 10px;
+        padding-left: 15px;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: block;
+    }
+
+    @include media-breakpoint-up(sm) {
+      h3 {
+        font-size: 1.5625rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &:after {
+        display: none;
+      }
+
+      h3 {
+        font-size: 2.1875rem;
+      }
+
+      p {
+        font-size: 1.375rem;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      h3 {
+        font-size: 2.625rem;
+      }
+
+      p {
+        font-size: 1.625rem;
+      }
+    }
+  }
+
+  //carousel-indicators styles
+  .carousel-indicators {
+    padding-left: 15px;
+    li {
+      margin-left: 0;
+      margin-right: 16px;
+      box-sizing: border-box;
+      border: none;
+      opacity: 1;
+
+      @include media-breakpoint-down(sm) {
+        width: 13px !important;
+        height: 13px;
+        background-color: transparent;
+        border: 1px #282828 solid;
+        border-radius: 30px;
+        margin-right: 8px;
+        margin-left: 8px;
+        opacity: 1;
+
+        &.active {
+          background-color: #282828 !important;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        padding: 5px;
+        height: auto;
+        min-height: 56px;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+        border: none;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding: 6px;
+        height: 67px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    img {
+      margin-right: 9px;
+      border-radius: 3px;
+      flex: 0 0 auto;
+
+      @include media-breakpoint-up(md) {
+        width: 40px;
+        height: 43px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 48px;
+        height: 54px;
+      }
+    }
+
+    &__content {
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(2, 2, 2, 0.2);
+      flex: 0 1 100%;
+    }
+
+    &__title {
+      font-weight: 300;
+      @include media-breakpoint-up(md) {
+        font-size: 0.625rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 0.75rem;
+      }
+    }
+
+    &__description {
+      font-weight: 600;
+
+      @include media-breakpoint-up(md) {
+        font-size: 0.6875rem;
+        line-height: 1;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 0.8125rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  //.carousel-control styles
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 77px;
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .carousel-control-prev {
+    border-radius: 0 3px 3px 0;
+  }
+
+  .carousel-control-next {
+    border-radius: 3px 0 3px 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    svg {
+      fill: #fff;
+      font-size: 26px;
+    }
+  }
+
+  .btn {
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+    &:focus,
+    &.focus {
+      box-shadow: none !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 0.8125rem;
+      min-width: 128px;
+      height: 38px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-width: 155px;
+      height: 45px;
+      font-size: 1rem;
+    }
+
+    &.btn-primary {
+      background-color: #ff891e;
+      border: 1px #ff891e solid;
+
+      &:hover {
+        background-color: #e57a19;
+        border: 1px #e57a19 solid;
+      }
+    }
+
+    &.btn-outline-primary {
+      border: 1px solid #212121;
+      color: #000000;
+
+      &:hover {
+        background-color: #000000;
+        color: #fff;
+        border: 1px solid #212121;
+      }
+    }
+
+    &-more {
+      z-index: 1001;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @include media-breakpoint-up(lg) {
+        min-width: 250px;
+      }
+    }
+  }
+}
